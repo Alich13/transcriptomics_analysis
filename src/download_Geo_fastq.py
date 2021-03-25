@@ -26,7 +26,7 @@ def get_XML_summary (project_name) -> object:#PRJNA352669
 
 if __name__ == '__main__' :
     df = pd.read_excel('/home/ali/PycharmProjects/transcriptomics_analysis/data/GEO -Filtred(AutoRecovered).xlsx')
-    for index, row in (df.iloc[0:1].iterrows()):
+    for index, row in (df.iloc[0:6].iterrows()):
         project=row['project']
         cell_type=row['CELL TYPE']
         txf=row['Target TXF']
@@ -49,7 +49,7 @@ if __name__ == '__main__' :
 
                 subprocess.call(terminal_download, shell=True)
 
-                terminal_change_name = 'cd ./results ; for f in SRR* ; do ' \
+                terminal_change_name = 'cd /home/ali/PycharmProjects/transcriptomics_analysis/results ; for f in SRR* ; do ' \
                                        'mv -- "$f" '+'"'+title+'_${f%.fastq}_'+txf+'.fastq'+'"'+'; done '
                 subprocess.call(terminal_change_name, shell=True)
 
