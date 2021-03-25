@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import xml.etree.ElementTree as ET
 from Bio import  Entrez
 import pandas as pd
