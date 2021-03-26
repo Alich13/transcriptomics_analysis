@@ -27,7 +27,7 @@ def get_XML_summary (project_name) -> object:#PRJNA352669
 
 if __name__ == '__main__' :
     df = pd.read_excel('/home/ali/PycharmProjects/transcriptomics_analysis/data/GEO -Filtred(AutoRecovered).xlsx')
-    for index, row in (df.iloc[0:6].iterrows()):
+    for index, row in (df.iloc[0:3].iterrows()):
         project=row['project']
         cell_type=row['CELL TYPE']
         txf=row['Target TXF']
@@ -58,4 +58,4 @@ if __name__ == '__main__' :
 
 
 
-                git_version ="addddd gggggggggggggggggggggg"
+
